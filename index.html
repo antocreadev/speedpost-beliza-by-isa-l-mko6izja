@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>BELIZA by Isa : lingerie, chaussures et maroquinerie à Corte</title>
+<meta name="description" content="Beliza by Isa, boutique féminine au 14 Cours Paoli à Corte. Lingerie, chaussures et maroquinerie choisies et conseillées par Isa, au coeur de Corte."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Cormorant+Garamond:ital,wght@0,500;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="./tailwind.css"/>
+<style>
+  :root{
+    --bg:#EDE9E6; --ink:#4A1622; --ink-2:#6E5A5E; --accent:#A07A3C; --line:#D9D1CB; --surface:#F6F3F1;
+  }
+  html{scroll-behavior:smooth;}
+  html,body{background:var(--bg);color:var(--ink);}
+  body{font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+  .font-display{font-family:'Tenor Sans',serif;}
+  .font-cormorant{font-family:'Cormorant Garamond',serif;}
+  .eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.2em;color:var(--ink-2);}
+  .label-univers{font-size:.74rem;text-transform:uppercase;letter-spacing:.22em;color:var(--accent);}
+
+  /* Hero contrast scrim, permanent */
+  .scrim{
+    position:absolute;inset:0;pointer-events:none;
+    background:
+      radial-gradient(60% 45% at 50% 52%, rgba(28,8,14,.42) 0%, transparent 70%),
+      linear-gradient(180deg, rgba(28,8,14,.62) 0%, rgba(28,8,14,.20) 24%, transparent 46%, transparent 58%, rgba(28,8,14,.40) 84%, rgba(28,8,14,.74) 100%);
+  }
+  .photo-tone{filter:brightness(.92) saturate(1.05) contrast(1.03);}
+  .on-photo, .on-photo *{color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45),0 2px 18px rgba(0,0,0,.35);}
+  .chip{
+    background:rgba(28,8,14,.42);backdrop-filter:blur(4px);color:#fff;
+    padding:.5rem 1rem;border-radius:999px;font-size:.8rem;letter-spacing:.04em;
+    display:inline-flex;align-items:center;gap:.5rem;
+  }
+  .dot{width:.5rem;height:.5rem;border-radius:999px;display:inline-block;}
+  .dot-open{background:#7FB87A;box-shadow:0 0 0 3px rgba(127,184,122,.28);}
+  .dot-closed{background:#C98A8A;box-shadow:0 0 0 3px rgba(201,138,138,.28);}
+
+  /* Header solid on scroll, custom inline class (jamais classe Tailwind dynamique) */
+  .header-solid{background:rgba(237,233,230,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+
+  /* Reveal safety net */
+  [data-reveal]{opacity:1;transform:none;}
+  .js-ready [data-reveal]{opacity:0;transform:translateY(18px);animation:autoreveal .6s ease-out .15s forwards;}
+  @keyframes autoreveal{to{opacity:1;transform:translateY(0)}}
+
+  /* Fil brass sous titres de nef */
+  .brass-line{height:1px;background:var(--accent);}
+  .nef-card:hover .brass-rule{height:2px;}
+  .brass-rule{height:1px;transition:height .18s ease;}
+
+  .surface{background:var(--surface);}
+  a{text-decoration:none;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-colors duration-300">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+    <a href="#top" class="font-display text-xl sm:text-2xl tracking-[0.14em] text-ink">BELIZA</a>
+    <nav class="hidden md:flex items-center gap-7 text-sm text-ink-2">
+      <a href="#univers" class="hover:text-ink transition-colors">Univers</a>
+      <a href="#maison" class="hover:text-ink transition-colors">La maison</a>
+      <a href="#infos" class="hover:text-ink transition-colors">Nous trouver</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <span id="status-pill-nav" class="hidden sm:inline-flex items-center gap-2 text-xs text-ink-2"></span>
+      <a href="tel:+33495485240" class="inline-flex items-center gap-2 rounded-full border border-accent text-accent px-3.5 py-1.5 text-sm hover:bg-accent hover:text-bg transition-colors">
+        <span class="hidden sm:inline">04 95 48 52 40</span><span class="sm:hidden">Appeler</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="relative min-h-[92svh] flex items-end overflow-hidden">
+    <img id="hero-image" src="./assets/images/unsplash-lingerie-2.jpg" alt="Vitrine de lingerie élégante, ambiance feutrée" loading="eager" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover photo-tone" style="transform:scale(1.04);"/>
+    <div class="scrim"></div>
+    <div class="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 pb-16 sm:pb-24 on-photo">
+      <p class="eyebrow on-photo mb-5" style="color:#F4E3D3;" data-reveal>Boutique féminine · Corte</p>
+      <h1 class="leading-[0.92]" data-reveal>
+        <span class="font-display block tracking-[0.05em]" style="font-size:clamp(2.8rem,9vw,5.6rem);">BELIZA</span>
+        <span class="font-cormorant italic block mt-1" style="font-size:clamp(1.6rem,4vw,2.6rem);color:#F4E3D3;">by Isa</span>
+      </h1>
+      <p class="font-cormorant italic mt-5 max-w-xl" style="font-size:clamp(1.15rem,2.4vw,1.5rem);" data-reveal>
+        Lingerie, chaussures et maroquinerie, choisies pour vous par Isa, au coeur de Corte.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center gap-3" data-reveal>
+        <a href="#infos" class="inline-flex items-center gap-2 rounded-full bg-bg text-ink px-6 py-3 text-sm font-medium hover:bg-white transition-colors">Nous trouver</a>
+        <a href="tel:+33495485240" class="chip text-sm">Appeler la boutique</a>
+        <span id="status-pill-hero" class="chip text-sm"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRIPTYQUE -->
+  <section id="univers" class="max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
+    <div class="text-center max-w-2xl mx-auto mb-14" data-reveal>
+      <p class="label-univers mb-4">Trois univers, une signature</p>
+      <h2 class="font-display tracking-[0.02em]" style="font-size:clamp(1.7rem,4vw,2.6rem);">Le triptyque de la maison</h2>
+      <p class="font-cormorant italic text-ink-2 mt-4" style="font-size:clamp(1.05rem,2.2vw,1.35rem);">Lingerie, chaussures et maroquinerie réunies sous un même toit, rare en Centre-Corse.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-7 md:gap-6">
+      <!-- Nef 1 -->
+      <article class="nef-card group" data-reveal>
+        <div class="relative overflow-hidden rounded-[14px] border border-line">
+          <img src="./assets/images/unsplash-lingerie-1.jpg" alt="Univers lingerie en vitrine" loading="lazy" class="w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-[1.04]"/>
+          <svg class="nef-thread absolute top-0 left-6 h-full" width="2" height="100%" viewBox="0 0 2 100" preserveAspectRatio="none" aria-hidden="true">
+            <line x1="1" y1="0" x2="1" y2="100" stroke="#A07A3C" stroke-width="2" stroke-dasharray="100" stroke-dashoffset="100"/>
+          </svg>
+        </div>
+        <div class="pt-5 transition-transform duration-200 group-hover:-translate-y-0.5">
+          <p class="label-univers mb-2">Nef I</p>
+          <h3 class="font-display text-2xl tracking-[0.02em]">Lingerie</h3>
+          <div class="brass-rule w-12 my-3"></div>
+          <p class="text-ink-2 text-[0.97rem] leading-relaxed">Ensembles délicats, nuit et bain de soleil, conseillés et essayés dans un cadre feutré.</p>
+          <ul class="mt-4 flex flex-wrap gap-2 text-xs text-ink-2">
+            <li class="rounded-full border border-line px-3 py-1">Ensembles</li>
+            <li class="rounded-full border border-line px-3 py-1">Nuit</li>
+            <li class="rounded-full border border-line px-3 py-1">Bain de soleil</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Nef 2 -->
+      <article class="nef-card group" data-reveal>
+        <div class="relative overflow-hidden rounded-[14px] border border-line">
+          <img src="./assets/images/unsplash-boutique-racks.jpg" alt="Sélection mode féminine de la boutique" loading="lazy" class="w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-[1.04]"/>
+          <svg class="nef-thread absolute top-0 left-6 h-full" width="2" height="100%" viewBox="0 0 2 100" preserveAspectRatio="none" aria-hidden="true">
+            <line x1="1" y1="0" x2="1" y2="100" stroke="#A07A3C" stroke-width="2" stroke-dasharray="100" stroke-dashoffset="100"/>
+          </svg>
+        </div>
+        <div class="pt-5 transition-transform duration-200 group-hover:-translate-y-0.5">
+          <p class="label-univers mb-2">Nef II</p>
+          <h3 class="font-display text-2xl tracking-[0.02em]">Chaussures</h3>
+          <div class="brass-rule w-12 my-3"></div>
+          <p class="text-ink-2 text-[0.97rem] leading-relaxed">Escarpins, sandales et modèles tout confort, sélectionnés pour la ligne et la tenue.</p>
+          <ul class="mt-4 flex flex-wrap gap-2 text-xs text-ink-2">
+            <li class="rounded-full border border-line px-3 py-1">Escarpins</li>
+            <li class="rounded-full border border-line px-3 py-1">Sandales</li>
+            <li class="rounded-full border border-line px-3 py-1">Confort</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Nef 3 -->
+      <article class="nef-card group" data-reveal>
+        <div class="relative overflow-hidden rounded-[14px] border border-line">
+          <img src="./assets/images/contexte-rue-corte-1.jpg" alt="Maroquinerie et accessoires, ambiance de Corte" loading="lazy" class="w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-[1.04]"/>
+          <svg class="nef-thread absolute top-0 left-6 h-full" width="2" height="100%" viewBox="0 0 2 100" preserveAspectRatio="none" aria-hidden="true">
+            <line x1="1" y1="0" x2="1" y2="100" stroke="#A07A3C" stroke-width="2" stroke-dasharray="100" stroke-dashoffset="100"/>
+          </svg>
+        </div>
+        <div class="pt-5 transition-transform duration-200 group-hover:-translate-y-0.5">
+          <p class="label-univers mb-2">Nef III</p>
+          <h3 class="font-display text-2xl tracking-[0.02em]">Maroquinerie</h3>
+          <div class="brass-rule w-12 my-3"></div>
+          <p class="text-ink-2 text-[0.97rem] leading-relaxed">Sacs, ceintures et petite maroquinerie en cuir, pour accorder la tenue jusqu'au détail.</p>
+          <ul class="mt-4 flex flex-wrap gap-2 text-xs text-ink-2">
+            <li class="rounded-full border border-line px-3 py-1">Sacs</li>
+            <li class="rounded-full border border-line px-3 py-1">Ceintures</li>
+            <li class="rounded-full border border-line px-3 py-1">Petite maroquinerie</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SIGNATURE ISA (inversé bordeaux) -->
+  <section id="maison" style="background:var(--ink);color:#EDE9E6;">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-28 grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+      <div class="order-2 md:order-1 overflow-hidden rounded-[16px]" data-reveal>
+        <img src="./assets/images/unsplash-boutique-hanging.jpg" alt="Intérieur chaleureux de la boutique, portants suspendus" loading="lazy" class="w-full aspect-[4/5] object-cover"/>
+      </div>
+      <div class="order-1 md:order-2" data-reveal>
+        <p class="label-univers mb-5">La maison</p>
+        <h2 class="font-display tracking-[0.02em] leading-tight" style="font-size:clamp(1.7rem,4vw,2.6rem);">Une sélection, pas une accumulation</h2>
+        <p class="font-cormorant italic mt-6" style="font-size:clamp(1.2rem,2.4vw,1.5rem);color:#E8D9CB;">
+          « Je choisis chaque pièce, je vous conseille, vous essayez, et vous repartez avec la bonne. »
+        </p>
+        <p class="mt-6 leading-relaxed" style="color:#D8C8C0;">
+          Beliza, c'est trois univers féminins réunis au 14 Cours Paoli et portés par une même main. Le luxe d'être conseillée, de prendre le temps d'essayer, et de trouver la pièce juste plutôt que la pièce de plus.
+        </p>
+        <p class="font-cormorant italic mt-6 text-2xl" style="color:#A07A3C;">Isa</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANCRAGE CORTE -->
+  <section class="relative overflow-hidden">
+    <img src="./assets/images/contexte-corte-centre.jpg" alt="Centre de Corte, Cours Paoli au pied de la citadelle" loading="lazy" class="absolute inset-0 w-full h-full object-cover photo-tone"/>
+    <div class="scrim"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 py-24 sm:py-32 on-photo">
+      <div class="max-w-xl" data-reveal>
+        <p class="eyebrow on-photo mb-4" style="color:#F4E3D3;">Au coeur de Corte</p>
+        <h2 class="font-display tracking-[0.02em] leading-tight" style="font-size:clamp(1.7rem,4vw,2.6rem);">Au 14 Cours Paoli, au pied de la citadelle</h2>
+        <p class="font-cormorant italic mt-5" style="font-size:clamp(1.15rem,2.4vw,1.5rem);">Sur l'artère piétonne du centre-ville, là où Corte se promène.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFOS -->
+  <section id="infos" class="max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
+    <div class="text-center max-w-2xl mx-auto mb-12" data-reveal>
+      <p class="label-univers mb-4">Nous trouver</p>
+      <h2 class="font-display tracking-[0.02em]" style="font-size:clamp(1.7rem,4vw,2.6rem);">Venir en boutique</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-7 md:gap-10">
+      <!-- Horaires + coordonnées -->
+      <div class="surface rounded-[16px] border border-line p-7 sm:p-9" data-reveal>
+        <div class="flex items-center gap-3 mb-6">
+          <span id="status-pill-infos" class="inline-flex items-center gap-2 text-sm"></span>
+        </div>
+
+        <table class="w-full text-[0.97rem]">
+          <tbody id="hours-table">
+            <tr data-day="1"><td class="py-2 text-ink-2">Lundi</td><td class="py-2 text-right">10:00 - 12:30 · 14:30 - 19:00</td></tr>
+            <tr data-day="2"><td class="py-2 text-ink-2">Mardi</td><td class="py-2 text-right">10:00 - 12:30 · 14:30 - 19:00</td></tr>
+            <tr data-day="3"><td class="py-2 text-ink-2">Mercredi</td><td class="py-2 text-right">10:00 - 12:30 · 14:30 - 19:00</td></tr>
+            <tr data-day="4"><td class="py-2 text-ink-2">Jeudi</td><td class="py-2 text-right">10:00 - 12:30 · 14:30 - 19:00</td></tr>
+            <tr data-day="5"><td class="py-2 text-ink-2">Vendredi</td><td class="py-2 text-right">10:00 - 12:30 · 14:30 - 19:00</td></tr>
+            <tr data-day="6"><td class="py-2 text-ink-2">Samedi</td><td class="py-2 text-right">10:00 - 12:30 · 14:30 - 19:00</td></tr>
+            <tr data-day="0"><td class="py-2 text-ink-2">Dimanche</td><td class="py-2 text-right text-ink-2">Fermé</td></tr>
+          </tbody>
+        </table>
+
+        <div class="brass-line w-full my-7 opacity-50"></div>
+
+        <address class="not-italic space-y-3 text-[0.97rem]">
+          <p><span class="label-univers block mb-1">Adresse</span>14 Cours Paoli, 20250 Corte</p>
+          <p><span class="label-univers block mb-1">Téléphone</span><a href="tel:+33495485240" class="text-accent hover:text-ink transition-colors">04 95 48 52 40</a></p>
+        </address>
+
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="tel:+33495485240" class="inline-flex items-center gap-2 rounded-full bg-ink text-bg px-5 py-2.5 text-sm hover:bg-accent transition-colors">Appeler la boutique</a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=42.3065604,9.1508824" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border border-accent text-accent px-5 py-2.5 text-sm hover:bg-accent hover:text-bg transition-colors">Itinéraire</a>
+        </div>
+      </div>
+
+      <!-- Maps -->
+      <div class="rounded-[16px] overflow-hidden border border-line min-h-[340px]" data-reveal>
+        <iframe title="Localisation de Beliza by Isa, 14 Cours Paoli Corte" src="https://maps.google.com/maps?q=42.3065604,9.1508824&z=16&output=embed" loading="lazy" style="border:0;width:100%;height:100%;min-height:340px;" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer style="background:var(--ink);color:#EDE9E6;">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-16">
+    <div class="brass-line w-full opacity-40 mb-10"></div>
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+      <div>
+        <p class="font-display tracking-[0.08em]" style="font-size:clamp(2.4rem,8vw,4.5rem);">BELIZA</p>
+        <p class="font-cormorant italic text-2xl mt-1" style="color:#A07A3C;">by Isa</p>
+      </div>
+      <div class="text-sm leading-relaxed" style="color:#D8C8C0;">
+        <p>14 Cours Paoli, 20250 Corte</p>
+        <p><a href="tel:+33495485240" class="hover:text-bg transition-colors" style="color:#E8D9CB;">04 95 48 52 40</a></p>
+        <p class="mt-2">Lun au sam : 10:00 - 12:30 · 14:30 - 19:00</p>
+        <p>Dimanche : fermé</p>
+      </div>
+    </div>
+    <p class="text-xs mt-10" style="color:#9C8580;">Site réalisé avec soin. © <span id="year"></span> Beliza by Isa.</p>
+  </div>
+</footer>
+
+<script type="module">
+  import { animate, inView } from 'https://cdn.jsdelivr.net/npm/motion@10.18.0/+esm';
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.documentElement.classList.add('js-ready');
+
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Header solid on scroll (classe custom inline, jamais classe Tailwind dynamique)
+  const nav = document.getElementById('nav');
+  const onScroll = () => { nav.classList.toggle('header-solid', window.scrollY > 40); };
+  onScroll(); window.addEventListener('scroll', onScroll, { passive:true });
+
+  // Pastille Ouvert / Ferme : calcul sur les horaires reels
+  function computeStatus(){
+    const now = new Date();
+    const day = now.getDay(); // 0 dim .. 6 sam
+    const mins = now.getHours()*60 + now.getMinutes();
+    let open = false;
+    if (day >= 1 && day <= 6){
+      const slots = [[600,750],[870,1140]]; // 10:00-12:30, 14:30-19:00
+      open = slots.some(([a,b]) => mins >= a && mins < b);
+    }
+    return open;
+  }
+  function renderStatus(){
+    const open = computeStatus();
+    const txt = open ? 'Ouvert maintenant' : 'Fermé actuellement';
+    const dotCls = open ? 'dot dot-open' : 'dot dot-closed';
+    document.querySelectorAll('#status-pill-nav, #status-pill-hero, #status-pill-infos').forEach(el=>{
+      el.innerHTML = '<span class="'+dotCls+'"></span>' + txt;
+    });
+    // surligner le jour courant
+    const d = new Date().getDay();
+    const row = document.querySelector('#hours-table tr[data-day="'+d+'"]');
+    if (row){ row.style.color = 'var(--ink)'; row.style.fontWeight = '600';
+      const accentCell = row.querySelector('td:last-child'); }
+  }
+  renderStatus();
+
+  if (!reduce){
+    // Reveals one-shot
+    inView('[data-reveal]', el => {
+      animate(el, { opacity:[0,1], transform:['translateY(18px)','translateY(0)'] }, { duration:0.5, easing:[0.2,0.7,0.2,1] });
+    }, { amount: 0.15 });
+
+    // Fil brass des nefs : déroulé de haut en bas, one-shot
+    inView('.nef-thread', el => {
+      const line = el.querySelector('line');
+      if (line) animate(line, { strokeDashoffset:[100,0] }, { duration:0.6, easing:'ease-out' });
+    }, { amount: 0.3 });
+  } else {
+    document.querySelectorAll('.nef-thread line').forEach(l=> l.setAttribute('stroke-dashoffset','0'));
+  }
+</script>
+</body>
+</html>
